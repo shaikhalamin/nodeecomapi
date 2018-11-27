@@ -9,8 +9,14 @@ router.get('/',(req,res,next)=>{
 });
 
 router.post('/',(req,res,next)=>{
+    const order = {
+        productId:  req.body.productid,
+        quantity:   req.body.quantity
+    }
+
     res.status(201).json({
-        message:'Its works for post request'
+        message:'Its works for post request',
+        orderdetails:order
     });
 });
 
